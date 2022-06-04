@@ -1,0 +1,6 @@
+pyrogram
+TgCrypto
+git
+wget
+datatime
+requests
