@@ -9,7 +9,7 @@ from pyrogram import Client, filters
 from datetime import datetime
 
 #puplic var's
-now = datetime.now()
+now = c
 
 
 
@@ -59,6 +59,12 @@ def send_m_command(app, msg):
     app.send_photo(msg.chat.id, photo="https://docs.pyrogram.org/_static/pyrogram.png")
     app.send_document(msg.chat.id, document="hi.txt")
 
+@app.on_message(filters.commad('echo'))
+def echoo(app, msg):
+    t = msg.text.split(none, 1)[1]
+    msg.reply(t)
+    print("[LOG: {}] :  /echo ::: {}" .format(datetime.now(), t))
+
 #bot runnig
-print("{} : the bot is running" .format(now))
+print("{} : the bot is running" .format(datetime.now()))
 app.run()
